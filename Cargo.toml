@@ -1,0 +1,15 @@
+[package]
+name = "kiibohd-sys"
+version = "0.1.0"
+descriptions = "Raw bindings to the kll engine (https://github.com/kiibohd/controller)"
+authors = ["Smasher816 <Smasher816@gmail.com>"]
+license = "LGPLv3"
+keywords = ["kiibohd", "kll", "keyboards", "hotkeys", "sys"]
+categories = ["external-ffi-bindings"]
+readme = "README.md"
+edition = "2018"
+links = "kiibohd"
+build = "build.rs"
+
+[build-dependencies]
+bindgen = "0.51.1"
