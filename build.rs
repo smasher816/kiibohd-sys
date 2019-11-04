@@ -31,7 +31,7 @@ fn main() {
     if ASAN {
         println!("cargo:rustc-link-lib=asan");
         println!("cargo:rustc-link-lib=ubsan");
-        println!("cargo:rustc-env=LD_PRELOAD=libasan.so.5:libubsan.so.1");
+        println!("cargo:rustc-env=LD_PRELOAD=libasan.so:libubsan.so");
     }
 
     // Tell cargo to invalidate the built crate whenever the wrapper changes

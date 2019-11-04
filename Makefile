@@ -21,7 +21,7 @@ $(LIB_DIR)/libkiibohd.so: controller/CMakeLists.txt
 	sed -i 's/-DSANITIZER=1//;s/EnableSaniziter=true/EnableSaniziter=false/' $(KEYBOARD_DIR)/Testing/$(BUILD_SCRIPT)
 	cd $(KEYBOARD_DIR); pipenv install
 	cd $(KEYBOARD_DIR); pipenv run bash -c "cd Testing && ./$(BUILD_SCRIPT)"
-	cp $(BUILD_DIR)/{*.h,*.so} $(LIB_DIR)
+	cp $(BUILD_DIR)/{*.h,*.json,*.so} $(LIB_DIR)
 
 build: $(LIB_DIR)/libkiibohd.so
 	cargo build
